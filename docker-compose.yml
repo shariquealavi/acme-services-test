@@ -3,6 +3,7 @@ services:
     build: ./apps/api
     environment:
       PORT: "3000"
+      ADMIN_URL: http://admin:4000
     ports:
       - "3000:3000"
   admin:
