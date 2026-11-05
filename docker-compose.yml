@@ -9,3 +9,13 @@ services:
     build: ./apps/admin
     environment:
       PORT: "4000"
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: acme
+      POSTGRES_PASSWORD: acme-test
+      POSTGRES_DB: acme
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata: {}
